@@ -1,0 +1,37 @@
+﻿<!-- 
+    
+    We are in an HtML file, but it runs C# == Razor
+
+    AT sign starts a C# block
+
+    -->
+
+@{
+    ViewData["Title"] = "Fee Schedule Extract";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        @{
+            // c# inside HTML
+            for (int i = 0; i < 5; i++)
+            {
+                @: *
+            }
+        }
+        <a href="https://docs.microsoft.com/aspnet/core"></a>.
+    </p>
+
+
+    @Html.TextBox("Something")
+
+    @using (Html.BeginForm("HelloWorld", "Create"))
+    {
+        // Call CreateController.HelloWorld() when they press "Create Me" in this form.
+
+        // This will call the "CreateController", the word "Create" gets the word Controller appended.
+        <input type="submit" value="Create Me" />
+
+    }
+</div>
